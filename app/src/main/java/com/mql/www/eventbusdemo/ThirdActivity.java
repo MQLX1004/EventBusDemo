@@ -21,8 +21,9 @@ public class ThirdActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                EventBus.getDefault().post(new MessageEvent("这是ThirdActivity发送的massage"));
+                EventBus.getDefault().post(new MessageEvent("这是ThirdActivity发送的massage"));
                 EventBus.getDefault().post("这是ThirdActivity发送的String");
+
             }
         });
     }

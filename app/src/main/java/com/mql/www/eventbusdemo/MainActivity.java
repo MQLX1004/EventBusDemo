@@ -1,7 +1,6 @@
 package com.mql.www.eventbusdemo;
 
 import android.content.Intent;
-import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,8 +25,10 @@ public class MainActivity extends AppCompatActivity {
         EventBus.getDefault().register(this);//注册
 
         tv_meaasge = (TextView)findViewById(R.id.main_tv);
+        tv_meaasge.setText("MainActivity");
 
         btn_message = (Button)findViewById(R.id.main_btn);
+        btn_message.setText("跳转到SecondActivity");
 
         btn_message.setOnClickListener(new View.OnClickListener() {
             @Override
