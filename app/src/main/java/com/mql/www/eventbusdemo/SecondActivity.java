@@ -56,6 +56,11 @@ public class SecondActivity extends AppCompatActivity {
         tv_second.setText(messageEvent.getMessage());
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onSecondEvent2(String s){
+        tv_second.setText(s);
+    }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
